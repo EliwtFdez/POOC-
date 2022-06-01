@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationForConceptsPoo
 {
-    public abstract class Employee
+    public abstract class Employee : IPay
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -20,7 +20,7 @@ namespace ApplicationForConceptsPoo
         public Boolean IsActive { get; set; }
 
 
-        public abstract decimal GetValioToPay();
+        public abstract decimal GetValueToPay();
 
         public override string ToString()
         {

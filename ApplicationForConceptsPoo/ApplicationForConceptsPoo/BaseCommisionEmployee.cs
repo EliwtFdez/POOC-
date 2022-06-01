@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace ApplicationForConceptsPoo
 {
-    public class SalaryEmployee : Employee
+    internal class BaseCommisionEmployee : CommissionEmployee
     {
-        public  decimal Salary { get; set; }
 
+        public decimal Base { get; set; }
 
         public override decimal GetValueToPay()
         {
-           return Salary;
+            return base.GetValueToPay() + Base;
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"\n\tValue To Pay..........: {$"{GetValueToPay():C2}",15}";
+                  $"\n\tBase.................: {$"{Base:C2}",18}";   
         }
+
+
     }
 }

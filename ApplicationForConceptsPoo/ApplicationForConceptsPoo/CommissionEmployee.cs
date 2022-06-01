@@ -14,7 +14,7 @@ namespace ApplicationForConceptsPoo
 
 
 
-         public override decimal GetValioToPay()
+         public override decimal GetValueToPay()
         {
             return Sales * (decimal)CommissionPorcentaje;
         }
@@ -24,7 +24,7 @@ namespace ApplicationForConceptsPoo
             return $"{base.ToString()}" +
                 $"\n\tCommision Porcentaje: {CommissionPorcentaje:P2}" +
                 $"\n\tSale..................: {Sales:p2}"+
-                $"\n\tValue To Pay..........: {GetValioToPay():C2}";
+                $"\n\tValue To Pay..........: {GetValueToPay():C2}";
         }
 
     }
